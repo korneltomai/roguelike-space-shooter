@@ -1,5 +1,5 @@
 from settings import *
-from player.player import Player
+from player.laser_ship import LaserShip
 
 class Game:
     def __init__(self):
@@ -11,11 +11,14 @@ class Game:
 
         # groups 
         self.all_sprites = pygame.sprite.Group()
+        self.player_projectiles = pygame.sprite.Group()
+
+        # data
+        self.player = LaserShip(self.all_sprites, self.all_sprites, self.player_projectiles)
 
         self.import_assets()
 
     def run(self):
-
         while self.running:
             delta_time = self.clock.tick() / 1000
             for event in pygame.event.get():
@@ -34,7 +37,7 @@ class Game:
         pygame.quit()
 
     def import_assets(self):
-        self.laser_surf = pygame.image.load(join("images", "laser.png")).convert_alpha()
+        pass
 
 if __name__ == '__main__':
     game = Game()

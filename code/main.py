@@ -11,10 +11,11 @@ class Game:
 
         # groups 
         self.all_sprites = pygame.sprite.Group()
-        self.player_projectiles = pygame.sprite.Group()
+        self.enemy_sprites = pygame.sprite.Group()
+        self.player_projectile_sprites = pygame.sprite.Group()
 
         # data
-        self.player = LaserShip(self.all_sprites, self.all_sprites, self.player_projectiles)
+        self.player = LaserShip(self.all_sprites, self.all_sprites, self.player_projectile_sprites, self.enemy_sprites)
 
         self.__import_assets()
 

@@ -1,0 +1,5 @@
+LASER_SHIP = {
+    "SPEED": 300,
+    "ATTACK_SPEED_MUL": 1.0,
+    "ATTACK_DAMAGE_MUL": 1.0
+}

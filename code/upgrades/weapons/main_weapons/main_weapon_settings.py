@@ -1,0 +1,3 @@
+LASER_GUN = {
+    "COOLDOWN": 1000,
+}

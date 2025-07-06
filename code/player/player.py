@@ -13,12 +13,14 @@ class Player(pygame.sprite.Sprite):
         self.direction = pygame.Vector2()
 
         # weapons
+        self.main_weapon_pos = (self.rect.centerx, self.rect.top)
         self.main_weapon = None
 
     def update(self, delta_time):
         self.handle_movement_input()
         self.move(delta_time)
         self.shoot()
+        self.main_weapon_pos = (self.rect.centerx, self.rect.top)
 
     def handle_movement_input(self):
         self.direction = pygame.Vector2(pygame.mouse.get_pos()) - pygame.Vector2(self.rect.center)

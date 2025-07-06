@@ -1,6 +1,6 @@
 from settings import *
 from player.player import Player
-from upgrades.main_weapons.laser_gun import LaserGun
+from upgrades.weapons.main_weapons.laser_gun import LaserGun
 
 class LaserShip(Player):
     def __init__(self, groups, all_sprites, player_projectiles):

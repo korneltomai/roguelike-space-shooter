@@ -16,7 +16,7 @@ class Game:
         # data
         self.player = LaserShip(self.all_sprites, self.all_sprites, self.player_projectiles)
 
-        self.import_assets()
+        self.__import_assets()
 
     def run(self):
         while self.running:
@@ -36,7 +36,7 @@ class Game:
         
         pygame.quit()
 
-    def import_assets(self):
+    def __import_assets(self):
         pass
 
 if __name__ == '__main__':
